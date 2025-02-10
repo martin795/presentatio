@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #de4c17, #d30fe9);
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .nav-container {
+            background: linear-gradient(to left,  #d30fe9, #de4c17,);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            height: calc(100% - 40px);
+        }
+
+        .nav-title {
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .nav-list {
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-bottom: 15px;
+        }
+
+        .nav-list a {
+            display: block;
+            padding: 15px;
+            color: #444;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+        }
+
+        .nav-list a:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .active {
+            background-color: #eef7fd !important;
+            border-left: 3px solid #3498db !important;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .nav-container {
+                height: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="nav-title">Profile Navigation</div>
+        <ul class="nav-list">
+            <li><a href="Bio.html" target="content">Short Profile</a></li>
+            <li><a href="Research.html" target="content">Research</a></li>
+            <li><a href="edu.html" target="content">Educational background</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Add click handler to highlight active link
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove active class from all links
+                document.querySelectorAll('.nav-list a').forEach(l => {
+                    l.classList.remove('active');
+                });
+                // Add active class to clicked link
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 30px;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInDown 1s ease-out forwards;
+            position: relative;
+        }
+
+        .welcome-title {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .congrats-image {
+            width: 100px;
+            height: auto;
+            margin-top: 20px;
+            animation: popIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .rainbow-star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .content-container {
+                padding: 20px;
+            }
+
+            .welcome-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="welcome-section">
+            <h1 class="welcome-title">Welcome to Dr. (Mrs.) Alimatu - Saadia Yussiff WebSite</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Congratulations" class="congrats-image">
+        </div>
+    </div>
+
+    <script>
+        function createStar() {
+            const star = document.createElement("div");
+            star.classList.add("rainbow-star");
+            document.body.appendChild(star);
+
+            const size = Math.random() * 20 + 10;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `-50px`;
+            star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+
+            setTimeout(() => {
+                star.remove();
+            }, 5000);
+        }
+
+        setInterval(createStar, 300);
+    </script>
+</body>
+</html>

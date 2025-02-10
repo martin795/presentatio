@@ -1,0 +1,197 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Portal</title>
+</head>
+<frameset rows="15%, 70%, 15%">
+    <frame src="lecture-header.html" name="header" noresize>
+    <frameset cols="20%, 80%">
+        <frame src="lecture-navigation (1).html" name="nav">
+        <frame src="lecture-content.html" name="content">
+    </frameset>
+    <frame src="lecture-footer.html" name="footer" noresize>
+</frameset>
+</html>
+
+<!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #4a060b;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>University Lecturer Portal</h1>
+</body>
+</html>
+
+<!-- navigation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1c51c4;
+            font-family: Arial, sans-serif;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-list li {
+            margin-bottom: 15px;
+        }
+        .nav-list a {
+            display: block;
+            padding: 10px;
+            background-color: #db346c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-list a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav-list">
+        <li><a href="lectures/programming.html" target="content">Programming</a></li>
+        <li><a href="lectures/database.html" target="content">Database Systems</a></li>
+        <li><a href="lectures/networking.html" target="content">Networking</a></li>
+        <li><a href="lectures/algorithms.html" target="content">Algorithms</a></li>
+        <li><a href="lectures/security.html" target="content">Cybersecurity</a></li>
+    </ul>
+</body>
+</html>
+
+<!-- content.html (default content) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .welcome {
+            text-align: center;
+            padding: 50px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <h2>Welcome to the Lecture Portal</h2>
+        <p>Please select a course from the menu on the left to view its content.</p>
+    </div>
+</body>
+</html>
+
+<!-- footer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 15px;
+            background-color: #00e9e9;
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <p>&copy; 2025 University Of Cape Coast. All rights reserved.</p>
+</body>
+</html>
+
+<!-- Example lecture content page (lectures/programming.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .lecture-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .topic {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .topic h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="lecture-content">
+        <h2>Programming Fundamentals</h2>
+        <div class="topic">
+            <h3>Week 1: Introduction to Programming</h3>
+            <p>This week covers basic programming concepts, including:</p>
+            <ul>
+                <li>Variables and Data Types</li>
+                <li>Control Structures</li>
+                <li>Functions and Methods</li>
+                <li>Basic Input/Output</li>
+            </ul>
+        </div>
+        <div class="topic">
+            <h3>Week 2: Object-Oriented Programming</h3>
+            <p>Introduction to object-oriented programming concepts:</p>
+            <ul>
+                <li>Classes and Objects</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Encapsulation</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

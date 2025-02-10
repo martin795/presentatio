@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+}
+
+.main{
+    opacity: 1;
+    background: linear-gradient(to right, #de4c17, #d30fe9);
+            color: white;
+    background-color: rgb(40,49, 130);
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin-top: 0;
+    color: white;
+}
+
+.main .sub1, .main .sub2{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.main .sub1 input{
+    margin: 15px 100px 20px 0;
+    padding: 0 30px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+.main .sub1 h3{
+    margin-left: 160px;
+}
+.main .sub2 h1{
+    margin-left: 180px;
+}
+
+.main .sub2 input{
+    height: 40px;
+    width: 5%;
+    border: 2px solid transparent;
+    background-color: rgba(11, 11, 107,.8);
+    padding: 20px;
+    margin-right: 110px;
+    border-radius: 5px;
+}
+
+.main .sub3{
+    background-color: rgb(45, 60, 189);
+    border: 1px solid transparent;
+    padding: 5px 0;
+}
+
+.main .sub3 a{
+    margin-right: 25px;
+    color: white;
+    text-decoration: none;
+
+}
+.b{
+    font-size: 30px;
+    text-align: center ;
+}
+.main .sub3 a:first-child{
+    margin-left: 160px;
+}
+
+.bg{
+    position: relative;
+    margin-top: -22px;
+    background-color: aliceblue;
+    height: 24em;
+}
+.bg .subg{
+    position: relative;
+    top: 60px;
+}
+
+.bg .subg img{
+    position: absolute;
+    float: left;
+    margin-left: 100px;
+    margin-right: 20px;
+    width: 30%;
+    height: 300px;
+    transition: opacity 1.5s ease;
+}
+.bg .subg .change{
+    opacity: 0;
+}
+.bg .subg:hover .change{
+    opacity: 1;
+}
+.bg .subg:hover .normal{
+    opacity: 0;
+}
+
+.bg .subg .sub-subg{
+    margin-left: 500px;
+}
+
+.bg .subg .sub-subg h3, .bg .subg .sub-subg p{
+    font-family:sans-serif;
+    font-size: 18px;
+}
+.bg .subg .sub-subg p{
+    color: rgba(0,0,0,.5);
+}

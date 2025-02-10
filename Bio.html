@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer Biography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .Profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: white;
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic {
+            width: 800px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            background-size: cover;
+            background-image: url('alimatu.jpg');
+            transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1); 
+            background-image: url('alimatu3.jpg');
+        }
+        
+        .bio-content h2 {
+            margin: 0;
+            color: #333;
+        }
+        .bio-content h3 {
+            margin: 5px 0;
+            color: #555;
+        }
+        .bio-content p {
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <section class="Profile">
+        <div class="profile-pic"></div>
+        <div class="bio-content">
+            <h2>Dr. (Mrs.) Alimatu - Saadia Yussiff</h2>
+            <h3>Professor of Computer Science</h3>
+            <p>Dr. (Mrs.) Alimatu - Saadia Yussiff is a Senior Lecturer in the Department of Computer Science and Information Technology, University of Cape Coast. She has taught relevant courses in the department, and assumed responsibilities of regular university lecturer including examination officer, registration officer and academic advisor. She is a dedicated, professional and accomplished lecturer with knowledge of teaching computer science and Information Technology courses. 
+            </p>
+        </div>
+    </section>
+</body>
+</html>
